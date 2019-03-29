@@ -46,8 +46,8 @@ db('projects')
 });
 
 router.post('/', (req, res) => {
-const { project_name, project_desc } = req.body
-if (!project_name || !project_desc) {
+const { project_name, description } = req.body
+if (!project_name || !description) {
     res.status(404).json({
     message: "need name and description"
     })
