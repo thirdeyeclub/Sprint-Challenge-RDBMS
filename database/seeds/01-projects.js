@@ -1,4 +1,3 @@
-
 exports.seed = function(knex) {
   return knex('projects').insert([
     { id: 1 , name: 'Wampus Revival' , description:'the hunt is on'},

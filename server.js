@@ -1,12 +1,12 @@
 const express = require('express');
 const server = express();
 // Routes
-
-
+const projects = require('./routes/projects.js');
+const actions = require('./routes/actions.js');
 server.use(express.json());
 
-//server.use('route', dishesR)
-//server.use('route', recipesRo)
+server.use('/api/projects', projects)
+server.use('/api/actions', actions)
 
 module.exports = server;
 
