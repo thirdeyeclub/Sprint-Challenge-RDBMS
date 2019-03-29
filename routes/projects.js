@@ -1,13 +1,10 @@
 const express = require('express');
 const pro_ex = require('../database/projectsext')
 const db = require('../database/config00');
-const knex = require('knex')
-
-
 const router = express.Router();
 router.use(express.json());
 
-router.get('/', (req, res) => {
+router.get('/api/projects', (req, res) => {
 pro_ex.getProjects()
     .then(data => {
     res.status(200).json(data)
@@ -17,7 +14,7 @@ pro_ex.getProjects()
     })
 })
 
-router.get('/:id', (req, res) => {
+router.get('/api/projects/:id', (req, res) => {
 const { id } = req.params;
 
 db('projects')
@@ -45,7 +42,7 @@ db('projects')
 })
 });
 
-router.post('/', (req, res) => {
+router.post('/api/projects', (req, res) => {
 const { project_name, description } = req.body
 if (!project_name || !description) {
     res.status(404).json({

@@ -1,10 +1,9 @@
 const express = require('express');
 const act_ex = require('../database/actionsext.js')
-
 const router = express.Router();
 router.use(express.json());
 
-router.get('/', (req, res) => {
+router.get('/api/actions', (req, res) => {
 act_ex.getActions()
     .then(data => {
     res.status(200).json(data)
@@ -14,7 +13,7 @@ act_ex.getActions()
     })
 })
 
-router.get('/:id', (req, res) => {
+router.get('/api/actions/:id', (req, res) => {
 const { id } = req.params;
 act_ex.getAction(id)
     .then(data => {
@@ -25,7 +24,7 @@ act_ex.getAction(id)
     })
 });
 
-router.post('/', (req, res) => {
+router.post('/api/actions', (req, res) => {
 const { description, project_id } = req.body
 if (!description || !project_id) {
     res.status(404).json({
