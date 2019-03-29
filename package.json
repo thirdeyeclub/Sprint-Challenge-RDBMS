@@ -1,0 +1,17 @@
+{
+"name": "Sprint-Challenge-RDBMS",
+"version": "1.0.0",
+"description": "Sprint ",
+"main": "index.js",
+"repository": "https://github.com/thirdeyeclub/Sprint-Challenge-RDBMS.git",
+"author": "thirdeyeclub <wwwaaavvveeerrr@gmail.com>",
+"license": "MIT",
+"private": false,
+"dependencies": {
+"express": "^4.16.4",
+"helmet": "^3.16.0",
+"knew": "^0.0.0",
+"node": "^11.12.0",
+"sqlite3": "^4.0.6"
+}
+}
