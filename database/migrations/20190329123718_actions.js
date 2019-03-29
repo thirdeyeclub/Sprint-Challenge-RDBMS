@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
         tbl.string('notes',500 );
         //flag here
         tbl.string('completed').defaultTo('false');
-        //a foreign key
+        //the foreign key
         tbl.integer('project_id')
         .unsigned()
         .references('project_id')
