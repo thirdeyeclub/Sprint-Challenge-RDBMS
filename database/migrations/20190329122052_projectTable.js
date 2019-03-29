@@ -1,4 +1,4 @@
-
+// welcome to the projects table
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('projects', tbl => {
         //id
